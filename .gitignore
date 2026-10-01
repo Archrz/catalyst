@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# nix build artifacts
+result
+result-*
+
+# tmp and editor files
+*~
+*.swp
+*.swo
+.*.swp
+.*.swo
+
+# nix build dirs
+.direnv/
+
+# nix backup
+*.nix.save
+*.nix.orig
+*.orig
