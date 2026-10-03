@@ -1,4 +1,6 @@
 {
+  username = "arch";
+
   gitUsername = "archrz";
   gitEmail = "Haavard.aleksander.andersen@gmail.com";
 

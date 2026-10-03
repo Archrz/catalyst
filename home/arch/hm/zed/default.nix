@@ -52,7 +52,6 @@
       theme = {
         mode = "dark";
         dark = "Catalyst";
-        light = "Catalyst";
       };
       icon_theme = "Material Icon Theme";
 

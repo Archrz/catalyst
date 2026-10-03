@@ -1,11 +1,11 @@
 { inputs, pkgs, ... }:
 let
   theme = pkgs.runCommand "spicetify-default-ayu" { } ''
-    cp -r "${inputs.spicetify-themes}/Default" $out
-    chmod -R u+w $out
-    
-cp ${pkgs.writeText "color.ini" ''
-      [AyuOLED]
+        cp -r "${inputs.spicetify-themes}/Default" $out
+        chmod -R u+w $out
+
+    cp ${pkgs.writeText "color.ini" ''
+      [Catalyst]
       text = E6E1CF
       subtext = E6E1CF
       main = 000000
@@ -31,7 +31,10 @@ in
   imports = [ inputs.spicetify-nix.homeManagerModules.default ];
   programs.spicetify = {
     enable = true;
-    theme = { name = "Default"; src = theme; };
-    colorScheme = "AyuOLED";
+    theme = {
+      name = "Default";
+      src = theme;
+    };
+    colorScheme = "Catalyst";
   };
 }

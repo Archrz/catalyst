@@ -1,10 +1,10 @@
-{ ... }:
+{ username, ... }:
 {
   imports = [
     # Home
     ../../home
-    ../../home/arch/mango
-    ../../home/arch/gui.nix
+    ../../home/${username}/mango
+    ../../home/${username}/gui.nix
 
     # Disk
     ./disko.nix
@@ -26,7 +26,7 @@
     ../../common/desktop.nix
   ];
 
-  home-manager.users.arch.xdg.configFile = {
+  home-manager.users.${username}.xdg.configFile = {
     "mango/extra.conf".source = ./mango/extra.conf;
   };
 

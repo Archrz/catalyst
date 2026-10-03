@@ -9,6 +9,5 @@
     libnotify
     localsend
     pavucontrol
-    plexamp
   ];
 }

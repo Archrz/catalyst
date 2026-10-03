@@ -11,4 +11,10 @@
       };
     };
   };
+
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "+${toString variables.maxGenerations}";
+  };
 }

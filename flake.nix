@@ -83,10 +83,11 @@
 
       # Hosts
       mkHost =
-        { hostname, username }:
+        { hostname }:
         let
           host = hostname;
           variables = hostVariables hostname;
+          username = variables.username;
         in
 
         lib.nixosSystem {
@@ -125,12 +126,10 @@
       nixosConfigurations = {
         template = mkHost {
           hostname = "template";
-          username = "arch";
         };
 
         Silverbullet = mkHost {
           hostname = "Silverbullet";
-          username = "arch";
         };
       };
     };

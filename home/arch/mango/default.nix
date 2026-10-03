@@ -26,8 +26,6 @@
   home-manager.users.${username} = {
     home.packages = with pkgs; [
       udiskie
-      wlr-randr
-      bemenu
       xkill
     ];
 

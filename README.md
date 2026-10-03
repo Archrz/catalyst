@@ -19,21 +19,13 @@ Catalyst is the project name for my personal nixos config.
 
 ---
 
-## features
-
-**catalyst-shell** — bar, custom launcher, dashboard, notifications, lock screen, idle overlay, screenshot UI with markup, popups for audio, brightness, bluetooth, wifi, calendar, color picker, and power profile.
-
-**modular hosts** — each machine lives in `hosts/<name>/` with its own hardware, GPU, packages, and Mango overrides.
-
----
-
-## hosts
+## Hosts
 
 - `Silverbullet`
 
 ---
 
-## install
+## Install
 
 ```bash
 nixos-install --flake github:Archrz/catalyst#Silverbullet
@@ -52,9 +44,9 @@ fr
 
 ---
 
-## customize
+## Customize
 
-Host overrides go in `hosts/<name>/variables.nix` — terminal, timezone, steam, virtualbox, etc.
+Host overrides go in `hosts/<name>/variables.nix`
 
 Monitors → `hosts/<name>/mango/extra.conf`
 

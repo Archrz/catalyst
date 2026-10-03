@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 let
   sshBanner = pkgs.writeText "catalyst-ssh-banner" ''
     ██████  █████  ████████╗ █████  ██╗  ██╗   ██╗███████╗████████╗
@@ -36,9 +36,9 @@ in
 
     mpd = {
       enable = true;
-      user = "arch";
+      user = username;
       settings = {
-        music_directory = "/home/arch/Music";
+        music_directory = "/home/${username}/Music";
         audio_output = [
           {
             type = "pulse";

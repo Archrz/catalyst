@@ -1,12 +1,12 @@
-{ ... }:
+{ username, ... }:
 
 {
   imports = [
     # Core
     ../../home
-    ../../home/arch/mango
-    ../../home/arch/gui.nix
-    ../../home/arch/mime.nix
+    ../../home/${username}/mango
+    ../../home/${username}/gui.nix
+    ../../home/${username}/mime.nix
 
     # Disk + Hardware
     ./disko.nix
@@ -33,7 +33,7 @@
     ../../common/libvirt.nix
   ];
 
-  home-manager.users.arch.xdg.configFile = {
+  home-manager.users.${username}.xdg.configFile = {
     "mango/extra.conf".source = ./mango/extra.conf;
   };
 

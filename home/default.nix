@@ -1,13 +1,19 @@
-{ pkgs, username, variables, inputs, ... }:
+{
+  pkgs,
+  username,
+  variables,
+  inputs,
+  ...
+}:
 {
   users.users.${username} = {
     isNormalUser = true;
-    extraGroups = [ 
-      "docker" 
-      "networkmanager" 
-      "wheel" 
+    extraGroups = [
+      "docker"
+      "networkmanager"
+      "wheel"
     ];
-    
+
     shell = pkgs.${variables.defaultShell};
     ignoreShellProgramCheck = true;
   };
@@ -17,12 +23,12 @@
 
   home-manager.users.${username} = {
     imports = [
-      ./arch/home.nix
-      ./arch/cli.nix
-      ./arch/dev.nix
-      ./arch/hm
+      ./${username}/home.nix
+      ./${username}/cli.nix
+      ./${username}/dev.nix
+      ./${username}/hm
     ];
-    
+
     home = {
       inherit username;
       homeDirectory = "/home/${username}";
