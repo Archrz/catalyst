@@ -49,16 +49,12 @@
       disable_ai = true;
       auto_update = false;
 
-      theme = {
-        mode = "dark";
-        dark = "Catalyst";
-      };
+      theme = "Catalyst";
       icon_theme = "Material Icon Theme";
 
       buffer_font_family = "JetBrainsMono Nerd Font";
       buffer_font_fallbacks = [
-        "Consolas"
-        "monospace"
+        "Noto Sans Mono"
       ];
       buffer_font_size = 15;
       ui_font_family = "JetBrainsMono Nerd Font";
@@ -66,8 +62,7 @@
       terminal = {
         font_family = "JetBrainsMono Nerd Font";
         font_fallbacks = [
-          "Consolas"
-          "monospace"
+          "Noto Sans Mono"
         ];
       };
 
@@ -129,6 +124,7 @@
       {
         context = "VimControl && !menu";
         bindings = {
+          "ctrl-o" = "workspace::Open";
           "space e" = "project_panel::ToggleFocus";
           "space f f" = "file_finder::Toggle";
           "space f g" = "pane::DeploySearch";
