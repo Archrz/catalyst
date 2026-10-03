@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ ... }:
 
 {
   imports = [
@@ -7,9 +7,6 @@
     ../../home/arch/mango
     ../../home/arch/gui.nix
     ../../home/arch/mime.nix
-
-    inputs.catalyst-shell.nixosModules.shell
-    inputs.catalyst-shell.nixosModules.sddm
 
     # Disk + Hardware
     ./disko.nix
@@ -54,7 +51,6 @@
     };
   };
 
-  services.displayManager.sddm.enable = true;
   powerManagement.cpuFreqGovernor = "performance";
   nixpkgs.config.allowUnfree = true;
 }

@@ -21,7 +21,6 @@
       ./arch/cli.nix
       ./arch/dev.nix
       ./arch/hm
-      inputs.catalyst-nvim.homeManagerModules.default
     ];
     
     home = {

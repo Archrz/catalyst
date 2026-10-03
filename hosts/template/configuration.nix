@@ -1,9 +1,10 @@
-{ inputs, ... }:
+{ ... }:
 {
   imports = [
     # Home
     ../../home
     ../../home/arch/mango
+    ../../home/arch/gui.nix
 
     # Disk
     ./disko.nix
@@ -15,8 +16,6 @@
 
     # NixOS
     ../../common/nixpkgs.nix
-
-    inputs.catalyst-shell.nixosModules.sddm
 
     # Common
     ../../common/boot.nix
@@ -38,6 +37,4 @@
       enable = true;
     };
   };
-
-  services.displayManager.sddm.enable = true;
 }

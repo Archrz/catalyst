@@ -1,5 +1,12 @@
-{ pkgs, username, ... }:
+{ pkgs, username, inputs, ... }:
 {
+  imports = [
+    inputs.catalyst-shell.nixosModules.shell
+    inputs.catalyst-shell.nixosModules.sddm
+  ];
+
+  services.displayManager.sddm.enable = true;
+
   home-manager.users.${username} = {
     programs.obs-studio = {
       enable = true;

@@ -1,9 +1,11 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [
     ./hm/git.nix
     ./hm/fish.nix
     ./hm/zoxide.nix
+
+    inputs.catalyst-nvim.homeManagerModules.default
   ];
 
   home.packages = with pkgs; [

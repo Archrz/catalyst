@@ -17,11 +17,11 @@
     },
     "catalyst-shell": {
       "locked": {
-        "lastModified": 1790883215,
-        "narHash": "sha256-JmCGDDVFxXfzaED60VJTymhmS52Fj6E+d+F9o/RRn8k=",
+        "lastModified": 1791056047,
+        "narHash": "sha256-nmwETfE8Y1Chz/aUGikBeODjdtCGu2kqJ3F/Q9WrV+I=",
         "owner": "Archrz",
         "repo": "catalyst-shell",
-        "rev": "f3801e3563bfe30dc82cf18f0c631a2dae5b2876",
+        "rev": "06cf22e14d8bcf11e0f02b2fa86669e3096cab07",
         "type": "github"
       },
       "original": {
