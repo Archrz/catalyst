@@ -17,7 +17,7 @@
     "snd_usb_audio.quirks=0x19f7:0x000a=0x80"
     "usbcore.autosuspend=-1"
   ];
-  
+
   boot.kernel.sysctl."vm.max_map_count" = 2147483642;
   boot.extraModprobeConfig = "options hid_apple fnmode=2";
 
