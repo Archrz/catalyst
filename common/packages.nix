@@ -7,5 +7,6 @@
     obsidian
     blender
     qt6.qtdeclarative
+    scanmem
   ];
 }
