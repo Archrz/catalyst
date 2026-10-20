@@ -8,5 +8,6 @@
     blender
     qt6.qtdeclarative
     scanmem
+    dotnet-sdk_10
   ];
 }

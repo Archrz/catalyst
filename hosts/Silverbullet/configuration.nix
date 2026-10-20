@@ -29,6 +29,7 @@
     ../../common/media.nix
     ../../common/diagnostics.nix
     ../../common/packages.nix
+    ../../common/pentest.nix
     ../../common/steam.nix
     ../../common/libvirt.nix
   ];
