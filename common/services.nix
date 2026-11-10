@@ -23,7 +23,15 @@ in
     pipewire = {
       enable = true;
       pulse.enable = true;
-      wireplumber.enable = true;
+      wireplumber = {
+        enable = true;
+        extraConfig."51-disable-nvidia-hdmi"."monitor.alsa.rules" = [
+          {
+            matches = [ { "device.name" = "alsa_card.pci-0000_01_00.1"; } ];
+            actions.update-props."device.disabled" = true;
+          }
+        ];
+      };
     };
 
     mpd = {
